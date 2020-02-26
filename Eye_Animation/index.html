@@ -1,0 +1,407 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./js/app.js" charset="utf-8"></script>
+  <script type="text/javascript" src="./js/dat.gui.min.js"></script>
+  <!-- <script src="./js/flux.js" charset="utf-8"></script> -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.js'></script>
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/127738/perlin.js'></script>
+  <link rel="stylesheet" href="global.css">
+  <link href='https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans&display=swaps' rel='stylesheet' type='text/css'>
+  <title>Animations by peter jesperen</title>
+</head>
+  <body onload="buildImage();">
+
+    <div id="logo">
+      <img id="logoId" src="./img/14-colored.png" alt="">
+      <div id="tag">
+        <p>Animations by <a id="phj" target="_blank" href="http://peterjespersen.com">phj</a></p>
+      </div>
+    </div>
+    <ul>
+      <li><a target="_blank" href="http://peterjespersen.com/">peterjespersen.com</a></li>
+    </ul>
+
+<div id="responsive">
+    <div id="container">
+      <div id="projectSection">
+
+        <div id="project">
+          <h2>Sinus Waves</h2>
+          <p>Description: This project, was created using the <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">javascript canvas API</a> and <a target="_blank" href="https://github.com/dataarts/dat.gui">dat.GUI.js</a> for manipulating the waves context variables</p>
+          <a target="_blank" href="https://piijt.github.io/SineWaves/">Explore →</a>
+          <div id="spaceBelow"></div>
+          <div id="sineWaves">
+            <canvas id="scene" width="300" height="300"></canvas>
+          </div>
+          <div id="spaceBelow"></div>
+          <div id="separator">
+            <svg data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23424242' fill-opacity='1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E></svg>
+          </div>
+        </div>
+
+
+        <div id="project">
+          <h2>Flux Effect</h2>
+          <p>Description: Animation created using <a  target="_blank" href="https://threejs.org/">Three.js</a></p>
+          <p>Press and hold to see the animation effect</p>
+          <a target="_blank" href="https://piijt.github.io/flux/">Explore →</a>
+          <div id="spaceBelow"></div>
+          <canvas id="flux"></canvas>
+          <div id="spaceBelow"></div>
+          <div id="separator">
+            <svg data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23424242' fill-opacity='1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E></svg>
+          </div>
+        </div>
+
+        <div id="project">
+          <h2>OGL (WebGL) animations</h2>
+          <p>Description: Simple animations using the opensource js library <a target="_blank" href="https://github.com/oframe/ogl">OGL</a> which is a simplified subset of <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</a></p>
+          <p>Try dragging the elements around to see the power of the OGL</p>
+          <div id="ogl"></div>
+          <div id="spaceBelow"></div>
+          <div id="separator">
+            <svg data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23424242' fill-opacity='1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E></svg>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- <div id="eyeAnimation"></div>
+  <div id="grid">
+    <img src="./img/1.png" alt="peterjespersen.com">
+    <img src="./img/2.png" alt="peterjespersen.com">
+    <img src="./img/7.png" alt="peterjespersen.com">
+    <img src="./img/8.png" alt="peterjespersen.com">
+    <img src="./img/9.png" alt="peterjespersen.com">
+    <img src="./img/10.png" alt="peterjespersen.com">
+    <img src="./img/11.png" alt="peterjespersen.com">
+    <img src="./img/12.png" alt="peterjespersen.com">
+    <img src="./img/13.png" alt="peterjespersen.com">
+  </div> -->
+
+    <script>
+      const gui = new dat.GUI();
+      dat.GUI.toggleHide();
+      gui.domElement.id = 'gui';
+      gui.close();
+      const canvas = document.querySelector('canvas');
+      const c = canvas.getContext('2d');
+
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      const wave = {
+        y:  canvas.height / 2,
+        length: 0.01,
+        amplitude: 100,
+        frequency: 0.072
+      }
+
+      const strokeColor = {
+        h: 192,
+        s: 50,
+        l: 50
+      }
+
+      const backgroundColor = {
+        r: 0,
+        g: 0,
+        b: 0,
+        a: 0.01
+      }
+
+      const waveFolder = gui.addFolder('Modify Wave');
+      waveFolder.add(wave, 'y', 0, canvas.height);
+      waveFolder.add(wave, 'length', -0.01, 0.01);
+      waveFolder.add(wave, 'amplitude', -300, 300);
+      waveFolder.add(wave, 'frequency', -0.01, 1);
+      // waveFolder.open();
+
+      const strokeFolder = gui.addFolder('Colors');
+      strokeFolder.add(strokeColor, 'h', 0, 255);
+      strokeFolder.add(strokeColor, 's', 0, 100);
+      strokeFolder.add(strokeColor, 'l', 0, 100);
+      // strokeFolder.open();
+
+      const backgroundFolder = gui.addFolder('Background Color');
+      backgroundFolder.add(backgroundColor, 'r', 0, 255);
+      backgroundFolder.add(backgroundColor, 'g', 0, 255);
+      backgroundFolder.add(backgroundColor, 'b', 0, 255);
+      backgroundFolder.add(backgroundColor, 'a', 0, 1);
+      // backgroundFolder.toggleHide();
+
+      let increment = wave.frequency;
+      function animate() {
+        requestAnimationFrame(animate);
+        c.fillStyle = 'rgba(0, 0, 0, 0.01)';
+        c.fillStyle = `rgba(${backgroundColor.r}, ${backgroundColor.g}, ${backgroundColor.b}, ${backgroundColor.a})`;
+        c.fillRect(0, 0, canvas.width, canvas.height);
+          c.beginPath();
+
+          c.moveTo(0, canvas.height / 2);
+          for (var i = 0; i < canvas.width; i++) {
+            // editable y value as line is drawn for each pixel of canvas.wdith
+            // Math.sin(Takes a value @i and outputs one in return)
+            c.lineTo(i,
+               wave.y + Math.sin(i * wave.length + increment) *
+               wave.amplitude * Math.sin(increment)
+             );
+          }
+          // hsl = hue saturation & light
+          // console.log(strokeColor.h * Math.sin(increment));
+          c.strokeStyle = `hsl(${strokeColor.h * Math.sin(increment)}, ${strokeColor.s}%, ${strokeColor.l}%)`;
+          c.stroke();
+          increment += wave.frequency;
+      }
+      animate();
+    </script>
+
+    <script type="module">
+
+        import {
+            Renderer, Camera, Orbit, Transform, Geometry, Vec3, Color, Polyline,
+        } from 'https://cdn.jsdelivr.net/npm/ogl@0.0.26/dist/ogl.mjs';
+
+        {
+            const renderer = new Renderer({dpr: 2});
+            const gl = renderer.gl;
+            const renderOGLinDOM = document.querySelector('#ogl');
+            renderOGLinDOM.appendChild(gl.canvas);
+            gl.clearColor(0.0, 0.0, 0.0, 1.0);
+
+            const camera = new Camera(gl);
+            camera.position.z = 3;
+
+            const controls = new Orbit(camera);
+
+            const scene = new Transform();
+
+            let polyline;
+
+            function resize() {
+                // renderer.setSize(window.innerWidth, window.innerHeight);
+                renderer.setSize(600, 300);
+
+                camera.perspective({aspect: gl.canvas.width / gl.canvas.height});
+                if (polyline) polyline.resize();
+            }
+            window.addEventListener('resize', resize, false);
+
+            const count = 100;
+            const points = [];
+            for (let i = 0; i < count; i++) {
+                const angle = i / (count - 2) * Math.PI * 2;
+                const x = Math.cos(angle);
+                const y = Math.sin(angle);
+                const z = 0;
+
+                points.push(new Vec3(x, y, z));
+            };
+
+            polyline = new Polyline(gl, {
+                points,
+                uniforms: {
+                    uColor: {value: new Color('#f1f1f1')},
+                    uThickness: {value: 10},
+                    uMiter: {value: 0},
+                },
+            });
+
+            polyline.mesh.setParent(scene);
+
+            // Call initial resize after creating the polyline to update its resolution uniforms
+            resize();
+
+            requestAnimationFrame(update);
+            function update(t) {
+                requestAnimationFrame(update);
+                controls.update();
+                renderer.render({scene, camera});
+            }
+        }
+    </script>
+
+    <script type="module">
+
+        import {
+            Renderer, Camera, Orbit, Transform, Geometry, Vec3, Color, Polyline,
+        } from 'https://cdn.jsdelivr.net/npm/ogl@0.0.25/dist/ogl.mjs';
+
+        {
+            const renderer = new Renderer({dpr: 2});
+            const gl = renderer.gl;
+            const renderOGLinDOM = document.querySelector('#ogl');
+            renderOGLinDOM.appendChild(gl.canvas);
+            gl.clearColor(0.0, 0.0, 0.0, 1.0);
+
+            const camera = new Camera(gl);
+            camera.position.z = 3;
+
+            const controls = new Orbit(camera);
+
+            const scene = new Transform();
+
+            let polyline;
+
+            function resize() {
+                renderer.setSize(600, 300);
+                camera.perspective({aspect: gl.canvas.width / gl.canvas.height});
+                if (polyline) polyline.resize();
+            }
+            window.addEventListener('resize', resize, false);
+
+            const points = [];
+            points.push(new Vec3( 0, -1, 0));
+            points.push(new Vec3(-1, -1, 0));
+            points.push(new Vec3(-1,  1, 0));
+            points.push(new Vec3( 1,  1, 0));
+            points.push(new Vec3( 1, -1, 0));
+            points.push(new Vec3( 0, -1, 0));
+
+            polyline = new Polyline(gl, {
+                points,
+                uniforms: {
+                    uColor: {value: new Color('#f1f1f1')},
+                    uThickness: {value: 10},
+                },
+            });
+
+            polyline.mesh.setParent(scene);
+
+            // Call initial resize after creating the polyline to update its resolution uniforms
+            resize();
+
+            requestAnimationFrame(update);
+            function update(t) {
+                requestAnimationFrame(update);
+                controls.update();
+                renderer.render({scene, camera});
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+    console.clear();
+    var renderer = new THREE.WebGLRenderer({
+      canvas: document.querySelector("canvas#flux"),
+      antialias: true
+    });
+
+    renderer.setPixelRatio(window.devicePixelRatio > 1 ? 2 : 1);
+    renderer.setSize(600, 300);
+    var scene = new THREE.Scene();
+
+    var camera = new THREE.PerspectiveCamera(
+      45,
+      window.innerWidth / window.innerHeight,
+      1,
+      1000
+    );
+
+    camera.position.z = 60;
+    var length = 30;
+    var mouseJump = {
+      x: 0,
+      y: 0
+    };
+
+    var offset = 0;
+
+    function Spline() {
+      this.geometry = new THREE.Geometry();
+      this.color = Math.floor(Math.random() * 80 + 180);
+      for (var j = 0; j < 180; j++) {
+        this.geometry.vertices.push(
+          new THREE.Vector3(j / 180 * length * 2 - length, 0, 0)
+        );
+        this.geometry.colors[j] = new THREE.Color(
+          "hsl(" + (j * 0.6 + this.color) + ",70%,70%)"
+        );
+      }
+      this.material = new THREE.LineBasicMaterial({
+        vertexColors: THREE.VertexColors
+      });
+      this.mesh = new THREE.Line(this.geometry, this.material);
+      this.speed = (Math.random() + 0.1) * 0.0002;
+      scene.add(this.mesh);
+    }
+
+    var isMouseDown = false;
+    var prevA = 0;
+    function render(a) {
+      requestAnimationFrame(render);
+      for (var i = 0; i < splines.length; i++) {
+        for (var j = 0; j < splines[i].geometry.vertices.length; j++) {
+          var vector = splines[i].geometry.vertices[j];
+          vector.y =
+            noise.simplex2(j * 0.05 + i - offset, a * splines[i].speed) * 8;
+          vector.z = noise.simplex2(vector.x * 0.05 + i, a * splines[i].speed) * 8;
+
+          vector.y *= 1 - Math.abs(vector.x / length);
+          vector.z *= 1 - Math.abs(vector.x / length);
+        }
+        splines[i].geometry.verticesNeedUpdate = true;
+      }
+      scene.rotation.x = a * 0.0003;
+      if (isMouseDown) {
+        mouseJump.x += 0.001;
+        if (a - prevA > 100) {
+          updateColor();
+          prevA = a;
+        }
+      } else {
+        mouseJump.x -= 0.001;
+      }
+      mouseJump.x = Math.max(0, Math.min(0.07, mouseJump.x));
+      offset += mouseJump.x;
+      renderer.render(scene, camera);
+    }
+    var splines = [];
+    for (var i = 0; i < 12; i++) splines.push(new Spline());
+    // function onResize() {
+    //   camera.aspect = window.innerWidth / window.innerHeight;
+    //   camera.updateProjectionMatrix();
+    //   renderer.setSize(window.innerWidth, window.innerHeight);
+    // }
+    function updateColor() {
+      for (var i = 0; i < splines.length; i++) {
+        var color = Math.abs((splines[i].color - offset * 10) % 360);
+        for (var j = 0; j < splines[i].geometry.vertices.length; j++) {
+          splines[i].mesh.geometry.colors[j] = new THREE.Color(
+            "hsl(" + (j * 0.6 + color) + ",70%,70%)"
+          );
+        }
+        splines[i].mesh.geometry.colorsNeedUpdate = true;
+      }
+    }
+    function onMouseDown(e) {
+      isMouseDown = true;
+      return false;
+    }
+
+    function onMouseUp() {
+      isMouseDown = false;
+    }
+
+    // window.addEventListener("resize", onResize);
+    window.addEventListener("keydown", onMouseDown);
+    document.body.addEventListener("mousedown", onMouseDown);
+    document.body.addEventListener("mouseup", onMouseUp);
+    document.body.addEventListener("touchstart", onMouseDown);
+    document.body.addEventListener("touchend", onMouseUp);
+    requestAnimationFrame(render);
+
+    </script>
+
+    <!-- <footer>
+      <div id="separator">
+        <svg data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23424242' fill-opacity='1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E></svg>
+      </div>
+    </footer> -->
+  </body>
+</html>
